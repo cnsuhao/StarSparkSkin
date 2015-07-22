@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:GridItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:mx="library://ns.adobe.com/flex/mx"
+					clipAndEnableScrolling="true" xmlns:comps="starskin.comps.*" width="100%" height="100%">
+
+	<fx:Script>
+		<![CDATA[
+			import flash.utils.getTimer;
+
+			import flashx.textLayout.container.ContainerController;
+			import flashx.textLayout.conversion.TextConverter;
+			import flashx.textLayout.elements.TextFlow;
+
+			import mx.core.IUIComponent;
+
+			override public function prepare( hasBeenRecycled:Boolean ):void
+			{
+				if( data == null )
+					return;
+
+				lblData.htmlText = content;
+			}
+
+			protected function get content():String
+			{
+				var label:String = "";
+
+				if( data )
+				{
+					label = data[ column.dataField ];
+
+					if( column.labelFunction is Function )
+					{
+						label = column.labelFunction( data, column );
+					}
+				}
+				return label;
+			}
+		]]>
+	</fx:Script>
+
+	<s:layout>
+		<s:BasicLayout />
+	</s:layout>
+	<comps:HtmlLabel id="lblData" fontFamily="Microsoft Yahei" width="100%" size="14" top="10" bottom="8" left="10" right="10" />
+
+</s:GridItemRenderer>

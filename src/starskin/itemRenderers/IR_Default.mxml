@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:mx="library://ns.adobe.com/flex/mx" autoDrawBackground="false" height="25">
+
+	<s:states>
+		<s:State name="normal" />
+		<s:State name="hovered" />
+		<s:State name="selected" />
+	</s:states>
+
+	<s:Rect id="bgFill" includeIn="hovered,selected" left="0" right="0" top="0" bottom="0">
+		<s:fill>
+			<s:SolidColor  color="0x50C8EF" alpha.normal="0" alpha.hovered="1" alpha.selected="0.5" />
+		</s:fill>
+	</s:Rect>
+
+	<s:Label id="labelDisplay" paddingRight="10"
+			 paddingLeft="10" verticalAlign="middle"
+			 height="100%" fontStyle="normal"
+			 color="0x667788" color.hovered="0xffffff"
+			 color.selected="0xffffff" />
+
+</s:ItemRenderer>

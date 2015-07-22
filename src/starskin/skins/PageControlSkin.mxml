@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:mx="library://ns.adobe.com/flex/mx" alpha.disabled="0.5">
+	<!-- host component -->
+	<fx:Metadata>
+		[HostComponent("starskin.comps.PageControl")]
+	</fx:Metadata>
+
+	<!-- SkinParts
+	name=lastButton, type=spark.components.supportClasses.ButtonBase, required=false
+	name=jumpTextInput, type=spark.components.TextInput, required=false
+	name=firstButton, type=spark.components.supportClasses.ButtonBase, required=false
+	name=nextButton, type=spark.components.supportClasses.ButtonBase, required=false
+	name=previousButton, type=spark.components.supportClasses.ButtonBase, required=false
+	name=pageInfo, type=spark.components.supportClasses.TextBase, required=false
+	name=pageButtonBar, type=spark.components.ButtonBar, required=false
+	-->
+
+	<s:states>
+		<s:State name="normal" />
+		<s:State name="disabled" />
+	</s:states>
+
+	<s:HGroup left="0" right="0" top="0" bottom="0" verticalAlign="middle" gap="5" enabled.disabled="false">
+
+		<s:Button id="firstButton" label="首页" width="60" />
+		<s:Button id="previousButton" label="上一页" width="60" />
+
+		<!--- 页码列表 -->
+		<!--		<s:DataGroup id="dataGroup" left="0" right="0" top="0" bottom="0">
+					<s:layout>
+						<s:HorizontalLayout id="pagerLayout" gap="2" />
+					</s:layout>
+					<s:itemRenderer>
+						<fx:Component>
+							<s:Button width="35" cornerRadius="4" skinClass="starskin.skins.ButtonSkin" click="pageButtonClickHandler(event)">
+								<fx:Script>
+									<![CDATA[
+										import spark.components.supportClasses.ButtonBase;
+
+										import starskin.events.PageControlEvent;
+
+										protected function pageButtonClickHandler( event:MouseEvent ):void
+										{
+											var e:PageControlEvent = new PageControlEvent( PageControlEvent.PAGE_CLICK, -1, -1, event.target as ButtonBase );
+											outerDocument.dataGroup.dispatchEvent( e );
+										}
+									]]>
+								</fx:Script>
+							</s:Button>
+						</fx:Component>
+					</s:itemRenderer>
+				</s:DataGroup>-->
+
+		<s:ButtonBar top="0" bottom="0" id="pageButtonBar" skinClass="starskin.skins.PageButtonBarSkin">
+		</s:ButtonBar>
+
+		<s:Button id="nextButton" label="下一页" width="60" />
+		<s:Button id="lastButton" label="尾页" width="60" />
+
+		<s:TextInput id="jumpTextInput" prompt="跳转页数" restrict="0-9" width="80" height="30" />
+		<s:Label id="pageInfo" color="#667788" fontWeight="bold" styleName="pageinfo" text="1/12，共176条记录" />
+
+	</s:HGroup>
+
+</s:Skin>

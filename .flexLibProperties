@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="starskin.skins.RadioButtonSkin"/>
+    <classEntry path="starskin.skins.CheckBoxSkin"/>
+    <classEntry path="starskin.skins.TextInputSkin"/>
+    <classEntry path="starskin.skins.TextAreaSkin"/>
+    <classEntry path="starskin.skins.ToggleButtonSkin"/>
+    <classEntry path="starskin.skins.ListSkin"/>
+    <classEntry path="starskin.skins.HSliderSkin"/>
+    <classEntry path="starskin.skins.HSliderTrackSkin"/>
+    <classEntry path="starskin.skins.HSliderThumbSkin"/>
+    <classEntry path="starskin.skins.VSliderSkin"/>
+    <classEntry path="starskin.skins.VSliderTrackSkin"/>
+    <classEntry path="starskin.skins.ProgressBarSkin"/>
+    <classEntry path="starskin.skins.ProgressBarTrackSkin"/>
+    <classEntry path="starskin.skins.HScrollBarSkin"/>
+    <classEntry path="starskin.skins.HScrollBarTrackSkin"/>
+    <classEntry path="starskin.skins.HScrollBarThumbSkin"/>
+    <classEntry path="starskin.skins.VScrollBarSkin"/>
+    <classEntry path="starskin.skins.VScrollBarTrackSkin"/>
+    <classEntry path="starskin.skins.VScrollBarThumbSkin"/>
+    <classEntry path="starskin.skins.PanelSkin"/>
+    <classEntry path="starskin.skins.TitleWindowSkin"/>
+    <classEntry path="starskin.skins.TitleWindowCloseButtonSkin"/>
+    <classEntry path="starskin.skins.ComboBoxSkin"/>
+    <classEntry path="starskin.itemRenderers.IR_Default"/>
+    <classEntry path="starskin.skins.DropDownListSkin"/>
+    <classEntry path="starskin.skins.DropDownListButtonSkin"/>
+    <classEntry path="starskin.skins.AlertSkin"/>
+    <classEntry path="starskin.skins.ToolTipSkin"/>
+    <classEntry path="starskin.comps.TextInputIcon"/>
+    <classEntry path="starskin.skins.DefaultButtonSkin"/>
+    <classEntry path="starskin.comps.ButtonIcon"/>
+    <classEntry path="starskin.skins.AccordionHeaderSkin"/>
+    <classEntry path="starskin.skins.PageSkin"/>
+    <classEntry path="starskin.skins.DataGridSkin"/>
+    <classEntry path="starskin.comps.Pager"/>
+    <classEntry path="starskin.skins.TabBarSkin"/>
+    <classEntry path="starskin.skins.TabBarButtonSkin"/>
+    <classEntry path="starskin.comps.SuperTabNavigator"/>
+    <classEntry path="starskin.comps.TabBar"/>
+    <classEntry path="starskin.events.TabCloseEvent"/>
+    <classEntry path="starskin.comps.TabViewer"/>
+    <classEntry path="starskin.skins.TabViewerSkin"/>
+    <classEntry path="starskin.layouts.GridActualHeightLayout"/>
+    <classEntry path="starskin.itemRenderers.AGIR_HtmlContent"/>
+    <classEntry path="starskin.comps.HtmlTextBase"/>
+    <classEntry path="starskin.comps.UITextField"/>
+    <classEntry path="starskin.comps.HtmlLabel"/>
+    <classEntry path="starskin.comps.PageControl"/>
+    <classEntry path="starskin.skins.PageControlSkin"/>
+    <classEntry path="starskin.events.PageControlEvent"/>
+    <classEntry path="starskin.skins.PageBarButton"/>
+    <classEntry path="starskin.skins.PageButtonBarSkin"/>
+  </includeClasses>
+  <includeResources>
+    <resourceEntry destPath="starskin/css/default.css" sourcePath="starskin/css/default.css"/>
+  </includeResources>
+  <namespaceManifests/>
+</flexLibProperties>

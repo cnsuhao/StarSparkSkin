@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+ADOBE SYSTEMS INCORPORATED
+Copyright 2008 Adobe Systems Incorporated
+All Rights Reserved.
+
+NOTICE: Adobe permits you to use, modify, and distribute this file
+in accordance with the terms of the license agreement accompanying it.
+
+-->
+
+<!--- The Spark skin class for the header of the MX Accordion container.
+
+@see mx.containers.Accordion
+
+@langversion 3.0
+@playerversion Flash 10
+@playerversion AIR 1.5
+@productversion Flex 4
+-->
+<s:SparkSkin xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" minWidth="21" minHeight="21" alpha.disabled="0.5">
+
+	<fx:Script>
+		/**
+		 * @private
+		 */
+		override protected function initializationComplete():void
+		{
+			useChromeColor = true;
+			super.initializationComplete();
+		}
+	</fx:Script>
+
+	<!-- states -->
+	<s:states>
+		<s:State name="up" />
+		<s:State name="over" />
+		<s:State name="down" />
+		<s:State name="disabled" />
+		<s:State name="selectedUp" stateGroups="selected" />
+		<s:State name="selectedOver" stateGroups="selected" />
+		<s:State name="selectedDown" stateGroups="selected" />
+		<s:State name="selectedDisabled" stateGroups="selected" />
+	</s:states>
+
+	<s:Rect id="fill" left="0" right="0" top="0" bottom="0">
+		<s:fill>
+			<s:SolidColor color="0x2D88A8" color.over="0x3C94B3" color.selectedOver="0x3C94B3" />
+		</s:fill>
+	</s:Rect>
+
+	<s:Rect id="highlight" left="0" right="0" top="0" height="1">
+		<s:fill>
+			<s:SolidColor color="0xffffff" alpha="0.5" />
+		</s:fill>
+	</s:Rect>
+
+</s:SparkSkin>
