@@ -334,20 +334,23 @@ package starskin.comps
 
 			var offset:int = Math.floor( maxShowPage / 2 );
 			var start:int = pageIndex - offset;
-			var end:int = pageIndex + offset;
+			var end:int = pageIndex + offset - ( maxShowPage % 2 > 0 ? 0 : 1 );
 
 			if( start < 1 )
 			{
+				// start - 1结果为负数，end 减这个负数实际上是向后扩展页码
 				end -= start - 1;
 				start = 1;
 			}
 
 			if( end > pageCount )
 			{
+				// 同上，向前扩展页码
 				start -= end - pageCount;
 				end = pageCount;
 			}
 
+			// 扩展页码后，控制边界
 			var tagStart:int = start < 1 ? 1 : start;
 			var tagEnd:int = end > pageCount ? pageCount : end;
 			var tagArr:Array = [];
