@@ -11,4 +11,6 @@ StarSparkSkin v1.0
   * 5、制作页码导航控件，支持皮肤。用以支持分页控制，支持 “首页、尾页、上一页、下一页、页码范围、页码跳转”
 
 ##相关配图：
-  * ![image]()
+  * ![image](http://git.oschina.net/starfire/StarSparkSkin/blob/master/1.jpg)
+  
+  * ![image](http://git.oschina.net/starfire/StarSparkSkin/blob/master/2.jpg)
