@@ -35,11 +35,11 @@ package starskin.comps
 		 */
 		override public function set width( value:Number ):void
 		{
-			var changed:Boolean = super.width != value;
-			super.width = value;
+			if( super.width == value )
+				return;
 
-			if( changed )
-				dispatchEvent( new Event( "widthChanged" ));
+			super.width = value;
+			dispatchChangeEvent( "widthChanged" );
 		}
 
 		/**
@@ -55,11 +55,11 @@ package starskin.comps
 		 */
 		override public function set height( value:Number ):void
 		{
-			var changed:Boolean = height != value;
-			super.height = value + leading;
+			if( height == value )
+				return;
 
-			if( changed )
-				dispatchEvent( new Event( "heightChanged" ));
+			super.height = value + leading;
+			dispatchChangeEvent( "heightChanged" );
 		}
 
 		/**
@@ -68,7 +68,7 @@ package starskin.comps
 		override public function setTextFormat( format:TextFormat, beginIndex:int = -1, endIndex:int = -1 ):void
 		{
 			super.setTextFormat( format, beginIndex, endIndex );
-			dispatchEvent( new Event( "textFormatChanged" ));
+			dispatchChangeEvent( "textFormatChanged" );
 		}
 
 		/**
@@ -76,14 +76,11 @@ package starskin.comps
 		 */
 		override public function set text( value:String ):void
 		{
-			if( !value )
-				value = "";
-			var changed:Boolean = super.text != value;
+			if( super.text == value )
+				return;
 
 			super.text = value;
-
-			if( changed )
-				dispatchEvent( new Event( "textChanged" ));
+			dispatchChangeEvent( "textChanged" );
 		}
 
 		/**
@@ -91,14 +88,11 @@ package starskin.comps
 		 */
 		override public function set htmlText( value:String ):void
 		{
-			if( !value )
-				value = "";
-			var changed:Boolean = super.htmlText != value;
+			if( super.htmlText == value )
+				return;
 
 			super.htmlText = value;
-
-			if( changed )
-				dispatchEvent( new Event( "textChanged" ));
+			dispatchChangeEvent( "textChanged" );
 		}
 
 		/**
@@ -108,7 +102,7 @@ package starskin.comps
 		{
 			super.insertXMLText( beginIndex, endIndex, richText, pasting );
 
-			dispatchEvent( new Event( "textChanged" ));
+			dispatchChangeEvent( "textChanged" );
 		}
 
 		/**
@@ -117,7 +111,7 @@ package starskin.comps
 		override public function appendText( newText:String ):void
 		{
 			super.appendText( newText );
-			dispatchEvent( new Event( "textChanged" ));
+			dispatchChangeEvent( "textChanged" );
 		}
 
 		/**
@@ -126,7 +120,7 @@ package starskin.comps
 		override public function replaceSelectedText( value:String ):void
 		{
 			super.replaceSelectedText( value );
-			dispatchEvent( new Event( "textChanged" ));
+			dispatchChangeEvent( "textChanged" );
 		}
 
 		/**
@@ -135,7 +129,7 @@ package starskin.comps
 		override public function replaceText( beginIndex:int, endIndex:int, newText:String ):void
 		{
 			super.replaceText( beginIndex, endIndex, newText );
-			dispatchEvent( new Event( "textChanged" ));
+			dispatchChangeEvent( "textChanged" );
 		}
 
 		//用于返回正确的文本高度，去除最后一行的行间距。
@@ -159,6 +153,12 @@ package starskin.comps
 		override public function get textWidth():Number
 		{
 			return super.textWidth + 5;
+		}
+
+		protected function dispatchChangeEvent( type:String ):void
+		{
+			if( hasEventListener( type ))
+				dispatchEvent( new Event( type ));
 		}
 
 		/**

@@ -1,46 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<s:GridItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:mx="library://ns.adobe.com/flex/mx"
-					clipAndEnableScrolling="true" xmlns:comps="starskin.comps.*" width="100%" height="100%">
+<ir:GridHtmlItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+						 xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:ir="starskin.itemRenderers.*" color="0x3d3d3d" fontSize="14"
+						 fontFamily="Microsoft Yahei" paddingLeft="8" paddingRight="8" paddingTop="6" paddingBottom="5">
+
 
 	<fx:Script>
 		<![CDATA[
-			import flash.utils.getTimer;
-
-			import flashx.textLayout.container.ContainerController;
-			import flashx.textLayout.conversion.TextConverter;
-			import flashx.textLayout.elements.TextFlow;
-
-			import mx.core.IUIComponent;
-
 			override public function prepare( hasBeenRecycled:Boolean ):void
 			{
+				super.prepare( hasBeenRecycled );
+
 				if( data == null )
 					return;
 
-				lblData.htmlText = content;
+				label = content;
 			}
 
 			protected function get content():String
 			{
-				var label:String = "";
+				var labelContent:String = "";
 
 				if( data )
 				{
-					label = data[ column.dataField ];
-
 					if( column.labelFunction is Function )
 					{
-						label = column.labelFunction( data, column );
+						labelContent = column.labelFunction( data, column );
+					}
+					else
+					{
+						labelContent = data[ column.dataField ];
 					}
 				}
-				return label;
+				return labelContent;
 			}
 		]]>
 	</fx:Script>
 
-	<s:layout>
-		<s:BasicLayout />
-	</s:layout>
-	<comps:HtmlLabel id="lblData" fontFamily="Microsoft Yahei" width="100%" size="14" top="10" bottom="8" left="10" right="10" />
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
 
-</s:GridItemRenderer>
+</ir:GridHtmlItemRenderer>

@@ -28,6 +28,7 @@ package starskin.layouts
 		public function GridActualHeightLayout()
 		{
 			super();
+			gridDimensions.variableRowHeight = true;
 		}
 
 		//--------------------------------------------------------------------------
@@ -43,6 +44,14 @@ package starskin.layouts
 
 		//--------------------------------------------------------------------------
 		//
+		//	Class properties
+		//
+		//--------------------------------------------------------------------------
+
+		protected var _measureContentHeight:Number = 0;
+
+		//--------------------------------------------------------------------------
+		//
 		//	Override methods
 		//
 		//--------------------------------------------------------------------------
@@ -54,7 +63,20 @@ package starskin.layouts
 			if( !grid )
 				return;
 
-			grid.measuredHeight = gridDimensions.getContentHeight();
+			grid.measuredHeight = _measureContentHeight = gridDimensions.getContentHeight();
+		}
+
+		override public function updateDisplayList( unscaledWidth:Number, unscaledHeight:Number ):void
+		{
+			super.updateDisplayList( unscaledWidth, unscaledHeight );
+
+			// 由于 gridDimensions.getContentHeight() 等得到尺寸的方法，需要 updateDisplayList 之后才能正常运作
+			// 此处在处理完之后，检测度量高度是否与更新完后的内容高度相同，不同则更新 grid 的 size
+			if( _measureContentHeight != gridDimensions.getContentHeight())
+			{
+				grid.measuredHeight = gridDimensions.getContentHeight();
+				grid.invalidateSize();
+			}
 		}
 	}
 }

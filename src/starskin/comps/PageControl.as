@@ -42,6 +42,9 @@ package starskin.comps
 		public function PageControl()
 		{
 			super();
+
+			// 未设置数据数量时，初始无效
+			enabled = false;
 		}
 
 		//--------------------------------------------------------------------------
@@ -253,34 +256,34 @@ package starskin.comps
 			super.commitProperties();
 
 			var index:int = _pageIndex;
+			var indexChanged:Boolean;
+
+			index = index > pageCount ? pageCount : index;
+			index = index < 1 ? 1 : index;
+			indexChanged = _pageIndex != index;
+			_pageIndex = index;
 
 			if( _pageSizeChanged || _dataCountChanged || _maxShowPageChanged )
 			{
 				// 更新总页数
 				_pageCount = Math.ceil( _dataCount / _pageSize );
+				enabled = _pageCount > 0;
 			}
 
-			if( _pageSizeChanged || _dataCountChanged || _maxShowPageChanged || _pageIndexChanged )
+			if( _pageSizeChanged || _dataCountChanged || _maxShowPageChanged || _pageIndexChanged || ( indexChanged && _pageCount > 0 ))
 			{
 				// 更新页码到指定数量
 				setPageNumberList( _pageCount );
-			}
-
-			if( _pageIndexChanged )
-			{
-				index = index > pageCount ? pageCount : index;
-				index = index < 1 ? 1 : index;
-				_pageIndex = index;
 
 				// 设置其它按钮可点击与否
 				updateControlButtonEnabled();
 
 				// 通过按钮标签修正选中页码
 				setSelectedIndexByLabel( index );
-			}
 
-			if( _pageSizeChanged || _dataCountChanged || _pageIndexChanged || _maxShowPageChanged )
+				// 更新设置分页信息
 				setPageInfo( index );
+			}
 
 			// 重置标志
 			_pageSizeChanged = _dataCountChanged = _pageIndexChanged = _maxShowPageChanged = false;

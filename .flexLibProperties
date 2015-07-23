@@ -45,14 +45,13 @@
     <classEntry path="starskin.skins.TabViewerSkin"/>
     <classEntry path="starskin.layouts.GridActualHeightLayout"/>
     <classEntry path="starskin.itemRenderers.AGIR_HtmlContent"/>
-    <classEntry path="starskin.comps.HtmlTextBase"/>
     <classEntry path="starskin.comps.UITextField"/>
-    <classEntry path="starskin.comps.HtmlLabel"/>
     <classEntry path="starskin.comps.PageControl"/>
     <classEntry path="starskin.skins.PageControlSkin"/>
     <classEntry path="starskin.events.PageControlEvent"/>
     <classEntry path="starskin.skins.PageBarButton"/>
     <classEntry path="starskin.skins.PageButtonBarSkin"/>
+    <classEntry path="starskin.itemRenderers.GridHtmlItemRenderer"/>
   </includeClasses>
   <includeResources>
     <resourceEntry destPath="starskin/css/default.css" sourcePath="starskin/css/default.css"/>

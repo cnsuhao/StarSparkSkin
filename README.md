@@ -1,3 +1,15 @@
+StarSparkSkin v1.1
+=====
+-----
+` StarSparkSkin 更新版本到 v1.1`
+
+##更新内容：
+  * 1、去除 HtmlLabel、HtmlTextBase　组件
+  * 2、继承 UIComponent 重新实现 IGridItemRenderer 接口设计 starskin.itemRenderers.GridHtmlItemRenderer
+  * 3、GridHtmlItemRenderer 在 DataGrid 中显示 HTML 速度达到极致。在企业开发中推荐使用，所有文本内容的 ItemRenderer 都可以通过此组件来表现。并且支持 color、fontSize、fontFamily 等多种文本样式。
+  * 4、优化 GridActualHeightLayout，现在可以真实的体现 DataGrid 的实际高度，而不必出现滚动条
+  * 5、优化 starskin.comps.UITextField 细节，提升效率
+
 StarSparkSkin v1.0
 =====
 -----

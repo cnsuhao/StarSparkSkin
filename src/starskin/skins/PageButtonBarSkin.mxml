@@ -45,7 +45,7 @@
 			@see spark.skins.spark.ButtonBarFirstButtonSkin
 		-->
 		<fx:Component id="firstButton">
-			<s:ButtonBarButton width="35" height="30" cornerRadius="4" skinClass="starskin.skins.PageBarButton" mouseChildren="false" />
+			<s:ButtonBarButton minWidth="35" height="30" cornerRadius="4" skinClass="starskin.skins.PageBarButton" mouseChildren="false" />
 		</fx:Component>
 
 		<!---
@@ -54,7 +54,7 @@
 			@see spark.skins.spark.ButtonBarMiddleButtonSkin
 		-->
 		<fx:Component id="middleButton">
-			<s:ButtonBarButton width="35" height="30" cornerRadius="4" skinClass="starskin.skins.PageBarButton" mouseChildren="false" />
+			<s:ButtonBarButton minWidth="35" height="30" cornerRadius="4" skinClass="starskin.skins.PageBarButton" mouseChildren="false" />
 		</fx:Component>
 
 		<!---
@@ -63,7 +63,7 @@
 			@see spark.skins.spark.ButtonBarLastButtonSkin
 		-->
 		<fx:Component id="lastButton">
-			<s:ButtonBarButton width="35" height="30" cornerRadius="4" skinClass="starskin.skins.PageBarButton" mouseChildren="false" />
+			<s:ButtonBarButton minWidth="35" height="30" cornerRadius="4" skinClass="starskin.skins.PageBarButton" mouseChildren="false" />
 		</fx:Component>
 
 	</fx:Declarations>
