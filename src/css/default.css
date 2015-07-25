@@ -1,0 +1,335 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace comp "starskin.components.*";
+@namespace comps "starskin.comps.*";
+
+global, mx|Alert
+{
+	modal-transparency: 0.5;
+	modal-transparency-blur: 0;
+	modal-transparency-color: #cccccc;
+}
+
+* {
+	fontFamily: "Microsoft Yahei, Courier New";
+	focusThickness: 1;
+	focusColor: #13A8D8;
+	focusAlpha: 0.2;
+}
+
+s|WindowedApplication {
+	color: #333333;
+	fontSize: 12px;
+	focusedTextSelectionColor: #D4DEE5;
+}
+
+s|WindowedApplication, s|Window {
+	backgroundColor: #fcfcfc;
+}
+
+mx|ToolTip {
+	color: #3d3d3d;
+	fontSize: 14;
+	
+	paddingLeft: 10;
+	paddingRight: 10;
+	paddingTop: 8;
+	paddingBottom: 7;
+	
+	cornerRadius: 4;
+
+	borderColor: #9E9E9E;
+	backgroundColor: #FFFFFE;
+	backgroundAlpha: 1;
+	dropShadowVisible: true;
+
+	borderSkin: ClassReference("starskin.skins.ToolTipBorder");
+}
+
+.errorTip {
+	color: #CE2929;
+	fontSize: 12;
+	fontWeight: normal;
+	fontFamily: "Microsoft Yahei, Courier New";
+
+	paddingBottom: 0;
+	paddingLeft: 4;
+	paddingRight: 4;
+	paddingTop: 2;
+	
+	borderStyle: "errorTipBelow";
+	borderColor: #CE2929;
+	backgroundColor: #FFFFFE;
+}
+
+mx|Alert {
+	borderSkin: ClassReference("starskin.skins.AlertSkin");
+	
+	titleStyleName: alertTitle;
+	messageStyleName: alertMessage;
+	buttonStyleName: alertButton;
+}
+
+mx|HDividedBox {
+	horizontalGap: 0;
+}
+
+mx|VDividedBox {
+	verticalGap: 0;
+}
+
+.alertTitle {
+	color: #667788;
+	fontWeight: bold;
+}
+
+.alertMessage {
+	lineHeight: 24;
+}
+
+.alertButton {
+	cornerRadius: 4;
+	buttonPadding: 5;
+	emphasizedSkin: ClassReference("starskin.skins.DefaultButtonSkin");
+　　skin: ClassReference("starskin.skins.ButtonSkin");
+}
+
+mx|Accordion {
+	headerHeight: 40;
+	openDuration: 0;
+	backgroundAlpha: 0;
+	borderAlpha: 0;
+	contentBackgroundAlpha: 0;
+	verticalGap: 0;
+}
+
+mx|AccordionHeader {
+	color: #E2E5DE;
+	fontWeight: bold;
+	fontSize: 14;
+	
+	upSkin: ClassReference(null);
+	disabledSkin: ClassReference(null);
+	downSkin: ClassReference(null);
+	overSkin: ClassReference(null);
+	
+	paddingLeft: 15;
+	paddingRight: 15;
+	paddingBottom: 0;
+	paddingTop: 0;
+
+	selectedDisabledSkin: ClassReference(null);
+	selectedDownSkin: ClassReference(null);
+	selectedOverSkin: ClassReference(null);
+	selectedUpSkin: ClassReference(null);
+	
+	skin: ClassReference("starskin.skins.AccordionHeaderSkin");
+}
+
+comps|TabViewer{
+	borderColor: #D4DEE5;
+	backgroundColor: #fcfcfc;
+	cornerRadius: 4;
+	skinClass: ClassReference("starskin.skins.TabViewerSkin");
+}
+
+s|Button {
+	cornerRadius: 4;
+	skinClass: ClassReference("starskin.skins.ButtonSkin");
+}
+
+s|Button.selected {
+	cornerRadius: 4;
+	skinClass: ClassReference("starskin.skins.ButtonSelectedSkin");
+}
+
+comps|ButtonIcon {
+	skinClass: ClassReference("starskin.skins.ButtonIconSkin");
+}
+
+s|Button.emphasized {
+	cornerRadius: 4;
+	skinClass: ClassReference("starskin.skins.DefaultButtonSkin");
+}
+
+s|RadioButton {
+	skinClass: ClassReference("starskin.skins.RadioButtonSkin");
+}
+
+s|ToggleButton {
+	skinClass: ClassReference("starskin.skins.ToggleButtonSkin");
+}
+
+s|CheckBox {
+	skinClass: ClassReference("starskin.skins.CheckBoxSkin");
+}
+
+s|TextInput {
+	color: #333;
+	borderColor: #D4DEE5;
+	focusedTextSelectionColor: #D4DEE5;
+	paddingLeft: 5;
+	paddingRight: 5;
+	skinClass: ClassReference("starskin.skins.TextInputSkin");
+}
+
+comps|TextInputIcon {
+	iconMargin: 8;	
+}
+
+s|TextInput.errInput {
+	color: #333;
+	borderColor: #ff6600;
+	focusColor: #ff6600;
+	paddingLeft: 5;
+	paddingRight: 5;
+	focusedTextSelectionColor: #D4DEE5;
+}
+
+s|TextArea {
+	color: #333;
+	borderColor: #D4DEE5;
+	paddingLeft: 5;
+	paddingRight: 5;
+	paddingTop: 5;
+	paddingBottom: 5;
+	lineHeight: 20;
+	focusedTextSelectionColor: #D4DEE5;
+	skinClass: ClassReference("starskin.skins.TextAreaSkin");
+}
+
+s|NumericStepper {
+}
+
+s|Spinner {
+}
+
+s|List {
+	color: #333;
+	borderColor: #D4DEE5;
+	skinClass: ClassReference("starskin.skins.ListSkin");
+}
+
+s|HSlider {
+	skinClass: ClassReference("starskin.skins.HSliderSkin");
+}
+
+s|VSlider {
+	skinClass: ClassReference("starskin.skins.VSliderSkin");
+}
+
+mx|ProgressBar {
+	color: #667788;
+	fontWeight: normal;
+	barSkin: ClassReference("starskin.skins.ProgressBarSkin");
+	trackSkin: ClassReference("starskin.skins.ProgressBarTrackSkin");
+}
+
+s|HScrollBar {
+	skinClass: ClassReference("starskin.skins.HScrollBarSkin");
+}
+
+s|VScrollBar {
+	skinClass: ClassReference("starskin.skins.VScrollBarSkin");
+}
+
+s|Panel {
+	showHeader: true;
+	borderColor: #D4DEE5;
+	borderAlpha: 1;
+	backgroundColor: #FAFCFD;
+	backgroundAlpha: 1;
+	cornerRadius: 2;
+	skinClass: ClassReference("starskin.skins.PanelSkin");
+}
+
+s|TitleWindow {
+	borderColor: #D4DEE5;
+	borderAlpha: 1;
+	backgroundColor: #FAFCFD;
+	backgroundAlpha: 1;
+	cornerRadius: 2;
+	skinClass: ClassReference("starskin.skins.TitleWindowSkin");
+}
+
+s|ComboBox, s|DropDownList {
+	color: #333;
+	borderColor: #D4DEE5;
+	borderColor: #D4DEE5;
+	borderAlpha: 1;
+	backgroundColor: #FAFCFD;
+	backgroundAlpha: 1;
+	paddingLeft: 10;
+	paddingRight: 10;
+}
+	
+s|ComboBox {
+	skinClass: ClassReference("starskin.skins.ComboBoxSkin");
+}
+
+s|DropDownList {
+	skinClass: ClassReference("starskin.skins.DropDownListSkin");
+}
+
+s|DataGrid {
+	skinClass: ClassReference("starskin.skins.DataGridSkin");
+}
+
+s|DataGrid,s|Grid {
+	alternatingRowColors: #fefefe,#f8f8f8;
+	borderColor: #DDDDDD;
+	color: #333333;
+	selectionColor: #BFF48A;
+	
+	rollOverColor: #E2ECF1;
+	fontSize: 14;
+	lineHeight: 22;
+}
+
+s|GridColumnHeaderGroup {
+	color: #4CA1BF;
+	textAlign: center;
+}
+
+comps|Pager {
+	headerBackColor: #fcfcfc;
+	skinClass: ClassReference("starskin.skins.PageSkin");
+}
+
+s|Form {
+	verticalGap: 0;
+	backgroundColor: #fefefe;
+	skinClass : ClassReference("starskin.skins.FormSkin");
+}
+
+s|FormHeading {
+	color: #4CA1BF;
+	fontSize : 14;
+	fontWeight : "bold";
+	backgroundColor: #E2ECF1;
+	skinClass : ClassReference("starskin.skins.FormHeadingSkin");
+}
+
+s|FormItem {
+	color: #3d3d3d;
+	errorColor: #ff3300;
+	errorIndicatorSource : Embed(source="image/ErrorIndicator.png");
+	requiredIndicatorSource : Embed(source="image/RequiredIndicator.png");
+	skinClass : ClassReference("starskin.skins.FormItemSkin");
+}
+
+comps|TextInputIcon {
+	paddingLeft: 5;
+	paddingRight: 5;
+	skinClass: ClassReference("starskin.skins.TextInputIconSkin");
+}
+
+comp|TextInputIcon.txtUser, comp|TextInputIcon.txtPass {
+	fontSize: 14;
+}
+
+comps|PageControl {
+	skinClass: ClassReference("starskin.skins.PageControlSkin");
+}
+
