@@ -1,3 +1,17 @@
+StarSparkSkin v1.3
+=====
+-----
+` StarSparkSkin 更新版本到 v1.3`
+
+  * 1、增加表单自动验证器 FormValidator
+  * 说明：一般表单验证会存在多个验证器，比如“字符串验证、电话号码验证、邮箱验证...”等等，而需要进行下一步操作，就得逐个检测这些检测器是否都正确通过。
+  * 这势必有些麻烦，而 FormValidator 可以方便的对多个验证器进行统一管理，只要所有验证器结果都通过了，则会统一派发一个 VALID 事件，来提醒进行下一步的逻辑处理。
+  
+##相关配图：
+  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/form.png?dir=0&filepath=form.png&oid=6b879dd3f3c4e5b2805234a7057902223f889e69&sha=060f09fd180dc4d24e0149cad0516f019ddb0a87)
+
+
+
 StarSparkSkin v1.2
 =====
 -----
