@@ -63,6 +63,8 @@
     <classEntry path="starskin.skins.VSliderSkin"/>
     <classEntry path="starskin.skins.VSliderTrackSkin"/>
     <classEntry path="starskin.skins.ToolTipBorder"/>
+    <classEntry path="starskin.plugins.FormValidator"/>
+    <classEntry path="starskin.events.ValidatorEvent"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
