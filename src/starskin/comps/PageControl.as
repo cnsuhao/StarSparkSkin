@@ -279,7 +279,7 @@ package starskin.comps
 				updateControlButtonEnabled();
 
 				// 通过按钮标签修正选中页码
-				setSelectedIndexByLabel( index );
+				setSelectedIndexByLabel( index, _pageIndexChanged );
 
 				// 更新设置分页信息
 				setPageInfo( index );
@@ -297,7 +297,7 @@ package starskin.comps
 			lastButton.enabled = _pageIndex < _pageCount;
 		}
 
-		protected function setSelectedIndexByLabel( pageIndex:int ):void
+		protected function setSelectedIndexByLabel( pageIndex:int, dispatch:Boolean = false ):void
 		{
 			var lng:int = pageButtonBar.dataProvider.length;
 
@@ -308,7 +308,7 @@ package starskin.comps
 					pageButtonBar.selectedIndex = i;
 
 					// 派发页面更改事件
-					dispatchPageChangedEvent( pageIndex );
+					dispatch && dispatchPageChangedEvent( pageIndex );
 					return;
 				}
 			}
@@ -440,6 +440,9 @@ package starskin.comps
 
 		protected function pageButtonClickHandler( event:IndexChangeEvent ):void
 		{
+			if( event.newIndex <= 0 )
+				return;
+
 			var newPageIndex:int = int( pageButtonBar.dataProvider.getItemAt( event.newIndex ));
 
 			if( event.type == IndexChangeEvent.CHANGING )
@@ -465,7 +468,7 @@ package starskin.comps
 					_needChangeIndexAfterPageListChanged = false;
 
 					// 通过按钮标签修正选中页码
-					setSelectedIndexByLabel( _pageIndex );
+					setSelectedIndexByLabel( _pageIndex, true );
 				}
 				else
 				{
