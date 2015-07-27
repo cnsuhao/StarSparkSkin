@@ -71,7 +71,7 @@ in accordance with the terms of the license agreement accompanying it.
 				<!--- The column containing the sequence label. -->
 				<s:ConstraintColumn id="sequenceCol" />
 				<!--- The column containing the form item's label. -->
-				<s:ConstraintColumn id="labelCol" />
+				<s:ConstraintColumn id="labelCol" minWidth="150" />
 				<!--- The column containing the form item's content. -->
 				<s:ConstraintColumn id="contentCol" width="100%" />
 				<!--- The column containing the form item's help content. -->
@@ -85,7 +85,7 @@ in accordance with the terms of the license agreement accompanying it.
 	</s:layout>
 
 	<!--- Defines the appearance of the Form class's background. -->
-	<s:Rect id="background" left="1" right="1" top="1" bottom="0" radiusX="2">
+	<s:Rect id="background" left="1" right="1" top="1" bottom="0" topLeftRadiusX="2" topRightRadiusX="2">
 		<s:fill>
 			<!--- @private -->
 			<s:SolidColor id="bgFill" color="#FFFFFF" />

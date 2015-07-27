@@ -86,7 +86,7 @@ that has additional logic to align the columns of FormItems.
 	<!--- @copy spark.components.SkinnableContainer#contentGroup -->
 	<!-- We set Form's showErrorTip and showErrorSkin to false, so we set them back
 		 to true for the Form's elements -->
-	<s:Group id="contentGroup" showErrorSkin="true" showErrorTip="true" left="0" right="0" top="0" bottom="10">
+	<s:Group id="contentGroup" showErrorSkin="true" showErrorTip="true" left="0" right="0" top="0" bottom="1">
 		<s:layout>
 			<s:FormLayout gap="0" />
 		</s:layout>

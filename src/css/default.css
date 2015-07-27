@@ -31,11 +31,36 @@ s|WindowedApplication, s|Window {
 mx|ToolTip {
 	color: #3d3d3d;
 	fontSize: 14;
+	
 	paddingLeft: 10;
 	paddingRight: 10;
 	paddingTop: 8;
 	paddingBottom: 7;
-	borderSkin: ClassReference("starskin.skins.ToolTipSkin");
+	
+	cornerRadius: 4;
+
+	borderColor: #9E9E9E;
+	backgroundColor: #FFFFFE;
+	backgroundAlpha: 1;
+	dropShadowVisible: true;
+
+	borderSkin: ClassReference("starskin.skins.ToolTipBorder");
+}
+
+.errorTip {
+	color: #CE2929;
+	fontSize: 12;
+	fontWeight: normal;
+	fontFamily: "Microsoft Yahei, Courier New";
+
+	paddingBottom: 0;
+	paddingLeft: 4;
+	paddingRight: 4;
+	paddingTop: 2;
+	
+	borderStyle: "errorTipRight";
+	borderColor: #CE2929;
+	backgroundColor: #FFFFFE;
 }
 
 mx|Alert {
@@ -273,6 +298,7 @@ comps|Pager {
 }
 
 s|Form {
+	verticalGap: 0;
 	backgroundColor: #fefefe;
 	skinClass : ClassReference("starskin.skins.FormSkin");
 }
