@@ -2,6 +2,7 @@
 <flexLibProperties includeAllClasses="false" useMultiPlatformConfig="false" version="3">
   <includeClasses>
     <classEntry path="starskin.comps.ButtonIcon"/>
+    <classEntry path="starskin.comps.LinkButton"/>
     <classEntry path="starskin.comps.PageControl"/>
     <classEntry path="starskin.comps.Pager"/>
     <classEntry path="starskin.comps.TabBar"/>
@@ -10,6 +11,7 @@
     <classEntry path="starskin.comps.UITextField"/>
     <classEntry path="starskin.events.PageControlEvent"/>
     <classEntry path="starskin.events.TabCloseEvent"/>
+    <classEntry path="starskin.events.ValidatorEvent"/>
     <classEntry path="starskin.itemRenderers.AGIR_HtmlContent"/>
     <classEntry path="starskin.itemRenderers.GIR_GridHeader"/>
     <classEntry path="starskin.itemRenderers.GIR_HtmlContent"/>
@@ -18,6 +20,7 @@
     <classEntry path="starskin.itemRenderers.IR_Default"/>
     <classEntry path="starskin.layouts.GridActualHeightLayout"/>
     <classEntry path="starskin.namespaces.dx_internal"/>
+    <classEntry path="starskin.plugins.FormValidator"/>
     <classEntry path="starskin.skins.AccordionHeaderSkin"/>
     <classEntry path="starskin.skins.AlertSkin"/>
     <classEntry path="starskin.skins.ButtonIconSkin"/>
@@ -39,6 +42,7 @@
     <classEntry path="starskin.skins.HSliderSkin"/>
     <classEntry path="starskin.skins.HSliderThumbSkin"/>
     <classEntry path="starskin.skins.HSliderTrackSkin"/>
+    <classEntry path="starskin.skins.LinkButtonSkin"/>
     <classEntry path="starskin.skins.ListSkin"/>
     <classEntry path="starskin.skins.PageBarButton"/>
     <classEntry path="starskin.skins.PageButtonBarSkin"/>
@@ -57,14 +61,14 @@
     <classEntry path="starskin.skins.TitleWindowCloseButtonSkin"/>
     <classEntry path="starskin.skins.TitleWindowSkin"/>
     <classEntry path="starskin.skins.ToggleButtonSkin"/>
+    <classEntry path="starskin.skins.ToolTipBorder"/>
     <classEntry path="starskin.skins.VScrollBarSkin"/>
     <classEntry path="starskin.skins.VScrollBarThumbSkin"/>
     <classEntry path="starskin.skins.VScrollBarTrackSkin"/>
     <classEntry path="starskin.skins.VSliderSkin"/>
     <classEntry path="starskin.skins.VSliderTrackSkin"/>
-    <classEntry path="starskin.skins.ToolTipBorder"/>
-    <classEntry path="starskin.plugins.FormValidator"/>
-    <classEntry path="starskin.events.ValidatorEvent"/>
+    <classEntry path="starskin.comps.HtmlTextBase"/>
+    <classEntry path="starskin.comps.HtmlText"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

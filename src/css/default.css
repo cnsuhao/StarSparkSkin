@@ -32,10 +32,10 @@ mx|ToolTip {
 	color: #3d3d3d;
 	fontSize: 14;
 	
-	paddingLeft: 10;
-	paddingRight: 10;
-	paddingTop: 8;
-	paddingBottom: 7;
+	paddingLeft: 8;
+	paddingRight: 8;
+	paddingTop: 5;
+	paddingBottom: 3;
 	
 	cornerRadius: 4;
 
@@ -146,6 +146,10 @@ s|Button.selected {
 
 comps|ButtonIcon {
 	skinClass: ClassReference("starskin.skins.ButtonIconSkin");
+}
+
+comps|LinkButton {
+	skinClass: ClassReference("starskin.skins.LinkButtonSkin");
 }
 
 s|Button.emphasized {

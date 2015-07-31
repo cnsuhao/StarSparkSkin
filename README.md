@@ -1,3 +1,14 @@
+StarSparkSkin v1.4
+=====
+-----
+` StarSparkSkin 更新版本到 v1.4`
+
+  * 1、重新设计实现 HtmlText，主要用于快速渲染 HTML 富文本内容，并支持选择和复制
+  * 2、优化 GridHtmlItemRenderer 细节和性能
+  * 3、增加 LinkButton 组件，支持 url、target、title 和默认支持点击打开网页功能，支持皮肤控制
+
+
+
 StarSparkSkin v1.3
 =====
 -----

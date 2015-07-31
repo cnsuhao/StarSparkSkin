@@ -312,6 +312,8 @@ package starskin.itemRenderers
 			_label = value;
 			labelChanged = true;
 			invalidateProperties();
+			invalidateSize();
+			invalidateDisplayList();
 			dispatchChangeEvent( "labelChanged" );
 		}
 
@@ -362,6 +364,11 @@ package starskin.itemRenderers
 			{
 				label = "";
 			}
+		}
+		
+		protected function getTextFieldAutoSize():String
+		{
+			return TextFieldAutoSize.LEFT;
 		}
 
 		//--------------------------------------------------------------------------
@@ -423,35 +430,29 @@ package starskin.itemRenderers
 			if( labelChanged || _labelDisplayChanged || _dataChange )
 			{
 				labelDisplay.$htmlText = _label;
-				labelChanged = _labelDisplayChanged = _dataChange = false;
+				_labelDisplayChanged = _dataChange = false;
 			}
 		}
-
-		override public function setActualSize( w:Number, h:Number ):void
-		{
-			super.setActualSize( w, h );
-
-			if( setActualSizeCalled )
-			{
-				labelDisplay.$width = w;
-				labelDisplay.$height = h;
-				invalidateSize();
-			}
-		}
-
+		
 		override protected function measure():void
 		{
 			super.measure();
-
+			
+			labelDisplay.autoSize = getTextFieldAutoSize();
+			
 			if( isNaN( explicitWidth ))
 			{
+				labelDisplay.wordWrap = labelDisplay.multiline = false;
+				
 				measuredWidth = Math.min( labelDisplay.textWidth, isNaN( explicitMaxWidth ) ? DEFAULT_MAX_WIDTH : explicitMaxWidth );
 				measuredHeight = Math.min( labelDisplay.textHeight, isNaN( explicitMaxHeight ) ? DEFAULT_MAX_HEIGHT : explicitMaxHeight );
 			}
 			else
 			{
-				measuredWidth = Math.max( isNaN( explicitWidth ) ? 0 : explicitWidth, explicitMinWidth );
-				measuredHeight = Math.max( isNaN( explicitHeight ) ? 0 : explicitHeight, explicitMinHeight );
+				labelDisplay.wordWrap = labelDisplay.multiline = true;
+				
+				measuredWidth = Math.max( width, isNaN( explicitWidth ) ? 0 : explicitWidth, explicitMinWidth );
+				measuredHeight = Math.max( height, isNaN( explicitHeight ) ? 0 : explicitHeight, explicitMinHeight );
 			}
 		}
 

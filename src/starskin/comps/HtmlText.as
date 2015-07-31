@@ -1,14 +1,14 @@
 //------------------------------------------------------------------------------
 //
 // ...
-// classname: GridHtmlItemRenderer
+// classname: HtmlText
 // author: 喵大( blog.csdn.net/aosnowasp )
-// created: 2015-7-23
+// created: 2015-7-29
 // copyright (c) 2013 喵大( aosnow@yeah.net )
 //
 //------------------------------------------------------------------------------
 
-package starskin.itemRenderers
+package starskin.comps
 {
 	import flash.events.Event;
 	import flash.text.TextFieldAutoSize;
@@ -19,16 +19,20 @@ package starskin.itemRenderers
 
 	import flashx.textLayout.formats.VerticalAlign;
 
+	import mx.core.IInvalidating;
+	import mx.core.IUIComponent;
 	import mx.core.mx_internal;
-
-	import spark.core.IDisplayText;
 
 	import starskin.namespaces.dx_internal;
 
 	use namespace dx_internal;
 	use namespace mx_internal;
 
-	public class GridHtmlItemRenderer extends GridHtmlItemRendererBase implements IDisplayText
+	/**
+	 * @copy starskin.comps.HtmlTextBase
+	 * @author AoSnow
+	 */
+	public class HtmlText extends HtmlTextBase
 	{
 		//--------------------------------------------------------------------------
 		//
@@ -36,7 +40,7 @@ package starskin.itemRenderers
 		//
 		//--------------------------------------------------------------------------
 
-		public function GridHtmlItemRenderer()
+		public function HtmlText()
 		{
 			super();
 		}
@@ -59,15 +63,6 @@ package starskin.itemRenderers
 		public function set text( value:String ):void
 		{
 			label = value;
-		}
-
-		//----------------------------------------
-		//  isTruncated
-		//----------------------------------------
-
-		public function get isTruncated():Boolean
-		{
-			return false;
 		}
 
 		//----------------------------------------
@@ -441,7 +436,6 @@ package starskin.itemRenderers
 				return;
 
 			_leading = value;
-			labelDisplay.leading = _leading;
 			defaultStyleChanged = true;
 
 			invalidateProperties();
@@ -876,6 +870,7 @@ package starskin.itemRenderers
 			labelDisplay.scrollH = 0;
 			labelDisplay.scrollV = 1;
 
+			// 考虑内间距
 			labelDisplay.$width = unscaledWidth - paddingL - paddingR;
 			var unscaledTextHeight:Number = 0;
 
@@ -890,6 +885,7 @@ package starskin.itemRenderers
 
 			labelDisplay.$height = unscaledTextHeight;
 
+			// 考虑行数限制
 			if( _maxDisplayedLines == 1 )
 				labelDisplay.wordWrap = false;
 			else if( Math.floor( width ) < Math.floor( measuredWidth ))
@@ -899,6 +895,7 @@ package starskin.itemRenderers
 			{
 				var lineM:TextLineMetrics = labelDisplay.getLineMetrics( 0 );
 				var h:Number = lineM.height * _maxDisplayedLines - lineM.leading + 4;
+				h += paddingT + paddingB;
 				labelDisplay.$height = Math.min( unscaledTextHeight, h );
 			}
 
