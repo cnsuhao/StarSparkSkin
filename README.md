@@ -8,8 +8,8 @@ StarSparkSkin v1.5
   * 3、DateField 和 DatePicker 都支持皮肤主题，可以自定义外观
 
 ##相关配图：
-  * ![image]()
-  * ![image]()
+  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/_assets/date1.png?dir=0&filepath=_assets%2Fdate1.png&oid=eabc5837ea6c9b1789a373b9efb558870afe74b3&sha=916b2cfb5151c8e906bf14c81bab193f1c493187)
+  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/_assets/date2.png?dir=0&filepath=_assets%2Fdate2.png&oid=a7815699eccc3956910b86edb36cb514d1be927c&sha=916b2cfb5151c8e906bf14c81bab193f1c493187)
 
 
 StarSparkSkin v1.4
