@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:mx="library://ns.adobe.com/flex/mx" autoDrawBackground="false" disabledAlpha="1">
+
+	<fx:Script>
+		<![CDATA[
+			import mx.utils.ObjectProxy;
+
+			import starskin.vo.DatePickerCellSet;
+
+			override public function set data( value:Object ):void
+			{
+				var d:DatePickerCellSet = value as DatePickerCellSet;
+				super.data = d;
+
+				enabled = true;
+
+				if( d )
+				{
+					enabled = d.enabled;
+
+					width = d.width;
+					height = d.height;
+
+					backgroundFill.color = d.backgroundColor;
+
+					labelDisplay.text = d.label;
+					labelDisplay.setStyle( "color", d.color );
+					labelDisplay.setStyle( "fontWeight", d.bold );
+
+					// 经过颜色
+					if( d.hasOwnProperty( "overColor" ) && d.enabled )
+					{
+						addEventListener( MouseEvent.ROLL_OVER, rollOverHandler );
+						addEventListener( MouseEvent.ROLL_OUT, rollOverHandler );
+					}
+				}
+
+				if( d == null || !d.enabled || !d.hasOwnProperty( "overColor" ))
+				{
+					removeEventListener( MouseEvent.ROLL_OVER, rollOverHandler );
+					removeEventListener( MouseEvent.ROLL_OUT, rollOverHandler );
+				}
+			}
+
+			private function rollOverHandler( event:MouseEvent ):void
+			{
+				var d:DatePickerCellSet = data as DatePickerCellSet;
+				labelDisplay.setStyle( "color", event.type == MouseEvent.ROLL_OVER ? d.overColor : d.color );
+				backgroundFill.color = event.type == MouseEvent.ROLL_OVER ? d.overBackgroundColor : d.backgroundColor;
+			}
+		]]>
+	</fx:Script>
+
+	<s:Rect width="100%" height="100%">
+		<s:fill>
+			<s:SolidColor id="backgroundFill" />
+		</s:fill>
+		<s:stroke>
+			<s:SolidColorStroke color="#ffffff" weight="1" alpha="0.5" />
+		</s:stroke>
+	</s:Rect>
+
+	<s:Label id="labelDisplay" horizontalCenter="0" verticalCenter="1" />
+
+</s:ItemRenderer>

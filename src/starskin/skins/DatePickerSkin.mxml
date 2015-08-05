@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:mx="library://ns.adobe.com/flex/mx">
+	<!-- host component -->
+	<fx:Metadata>
+		[HostComponent("starskin.comps.DatePicker")]
+	</fx:Metadata>
+
+	<!-- states -->
+	<s:states>
+		<s:State name="dayType" />
+		<s:State name="monthType" stateGroups="otherTypes" />
+		<s:State name="yearType" stateGroups="otherTypes" />
+	</s:states>
+
+	<!-- SkinParts
+	name=previousButton, type=spark.components.supportClasses.ButtonBase, required=false
+	name=clearButton, type=spark.components.supportClasses.ButtonBase, required=false
+	name=nextButton, type=spark.components.supportClasses.ButtonBase, required=false
+	name=dateGroup, type=spark.components.DataGroup, required=false
+	name=centerButton, type=spark.components.supportClasses.ButtonBase, required=false
+	name=weekGroup, type=spark.components.DataGroup, required=false
+	-->
+
+	<!--- background -->
+	<s:Rect width="100%" height="100%" radiusX="3">
+		<s:fill>
+			<s:SolidColor color="#94AED0" />
+		</s:fill>
+		<s:stroke>
+			<s:SolidColorStroke color="#CCDFE4" weight="2" />
+		</s:stroke>
+	</s:Rect>
+
+	<s:VGroup id="container" left="3" right="5" top="5" bottom="5" gap="3">
+		<s:HGroup width="100%" gap="0">
+			<s:Button id="previousButton" width="30" height="25" cornerRadius="10" label="&lt;" skinClass="starskin.skins.DatePickerControlButtonSkin" />
+			<s:Button id="centerButton" width="100%" height="25" label="2015年, 8月" cornerRadius="10"
+					  skinClass="starskin.skins.DatePickerControlButtonSkin" />
+			<s:Button id="nextButton" width="30" height="25" cornerRadius="10" label="&gt;" skinClass="starskin.skins.DatePickerControlButtonSkin" />
+		</s:HGroup>
+
+		<s:VGroup gap="0">
+			<!--- @copy spark.components.SkinnableDataContainer#dataGroup -->
+			<s:DataGroup id="weekGroup" width="210" height="26" visible="false" visible.dayType="true" includeInLayout.dayType="true"
+						 includeInLayout.otherTypes="false" visible.otherTypes="false" itemRenderer="starskin.itemRenderers.IR_DatePickerWeek">
+				<s:layout>
+					<s:HorizontalLayout gap="0" horizontalAlign="center" />
+				</s:layout>
+			</s:DataGroup>
+
+			<!--- @copy spark.components.SkinnableDataContainer#dataGroup -->
+			<s:DataGroup id="dateGroup" width="210" height="150" height.otherTypes="176" itemRenderer="starskin.itemRenderers.IR_DatePickerCell">
+				<s:layout>
+					<s:TileLayout horizontalGap="0" verticalGap="0" />
+				</s:layout>
+			</s:DataGroup>
+		</s:VGroup>
+
+		<s:Button id="clearButton" width="100%" height="28" label="Clear" cornerRadius="10" skinClass="starskin.skins.DatePickerControlButtonSkin" />
+	</s:VGroup>
+
+
+</s:Skin>

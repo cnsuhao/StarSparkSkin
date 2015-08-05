@@ -1,3 +1,17 @@
+StarSparkSkin v1.5
+=====
+-----
+` StarSparkSkin 更新版本到 v1.5`
+
+  * 1、设计实现 DatePicker 代替原生 DateChooser，完成日期选择功能，支持 “年、月、日” 三种状态切换选择，而不是生硬的通过按钮控制
+  * 2、重新设计实现 DateField，利用 DatePicker 来完成日期表单控件
+  * 3、DateField 和 DatePicker 都支持皮肤主题，可以自定义外观
+
+##相关配图：
+  * ![image]()
+  * ![image]()
+
+
 StarSparkSkin v1.4
 =====
 -----

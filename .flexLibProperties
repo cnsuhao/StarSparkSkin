@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<flexLibProperties includeAllClasses="false" useMultiPlatformConfig="false" version="3">
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
   <includeClasses>
     <classEntry path="starskin.comps.ButtonIcon"/>
+    <classEntry path="starskin.comps.DateField"/>
+    <classEntry path="starskin.comps.DatePicker"/>
+    <classEntry path="starskin.comps.HtmlText"/>
+    <classEntry path="starskin.comps.HtmlTextBase"/>
     <classEntry path="starskin.comps.LinkButton"/>
     <classEntry path="starskin.comps.PageControl"/>
     <classEntry path="starskin.comps.Pager"/>
@@ -9,6 +13,7 @@
     <classEntry path="starskin.comps.TabViewer"/>
     <classEntry path="starskin.comps.TextInputIcon"/>
     <classEntry path="starskin.comps.UITextField"/>
+    <classEntry path="starskin.events.DatePickerEvent"/>
     <classEntry path="starskin.events.PageControlEvent"/>
     <classEntry path="starskin.events.TabCloseEvent"/>
     <classEntry path="starskin.events.ValidatorEvent"/>
@@ -17,6 +22,8 @@
     <classEntry path="starskin.itemRenderers.GIR_HtmlContent"/>
     <classEntry path="starskin.itemRenderers.GridHtmlItemRenderer"/>
     <classEntry path="starskin.itemRenderers.GridHtmlItemRendererBase"/>
+    <classEntry path="starskin.itemRenderers.IR_DatePickerCell"/>
+    <classEntry path="starskin.itemRenderers.IR_DatePickerWeek"/>
     <classEntry path="starskin.itemRenderers.IR_Default"/>
     <classEntry path="starskin.layouts.GridActualHeightLayout"/>
     <classEntry path="starskin.namespaces.dx_internal"/>
@@ -30,6 +37,9 @@
     <classEntry path="starskin.skins.ComboBoxButtonSkin"/>
     <classEntry path="starskin.skins.ComboBoxSkin"/>
     <classEntry path="starskin.skins.DataGridSkin"/>
+    <classEntry path="starskin.skins.DateFieldSkin"/>
+    <classEntry path="starskin.skins.DatePickerControlButtonSkin"/>
+    <classEntry path="starskin.skins.DatePickerSkin"/>
     <classEntry path="starskin.skins.DefaultButtonSkin"/>
     <classEntry path="starskin.skins.DropDownListButtonSkin"/>
     <classEntry path="starskin.skins.DropDownListSkin"/>
@@ -67,8 +77,7 @@
     <classEntry path="starskin.skins.VScrollBarTrackSkin"/>
     <classEntry path="starskin.skins.VSliderSkin"/>
     <classEntry path="starskin.skins.VSliderTrackSkin"/>
-    <classEntry path="starskin.comps.HtmlTextBase"/>
-    <classEntry path="starskin.comps.HtmlText"/>
+    <classEntry path="starskin.vo.DatePickerCellSet"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

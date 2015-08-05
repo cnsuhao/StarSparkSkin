@@ -25,7 +25,7 @@
 	  @playerversion AIR 1.5
 	  @productversion Flex 4
 -->
-<s:SparkSkin xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:fb="http://ns.adobe.com/flashbuilder/2009" alpha.disabled=".5">
+<s:SparkSkin xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:fb="http://ns.adobe.com/flashbuilder/2009" alpha.disabled=".5" minWidth="70">
 
 	<!-- host component -->
 	<fx:Metadata>
@@ -41,7 +41,7 @@
 		<![CDATA[
 			/* Define the content fill items that should be colored by the "contentBackgroundColor" style. */
 			static private const contentFill:Array = [ "bgFill" ];
-			
+
 			private var paddingChanged:Boolean;
 			private var cornerRadiusChanged:Boolean;
 			private var cornerRadius:Number = 0;
@@ -57,69 +57,69 @@
 			override protected function commitProperties():void
 			{
 				super.commitProperties();
-				
+
 				if( paddingChanged && labelDisplay )
 				{
 					// Push padding styles into the textDisplay
 					var padding:Number;
-					
+
 					padding = getStyle( "paddingLeft" );
-					
+
 					if( labelDisplay.getStyle( "paddingLeft" ) != padding )
 						labelDisplay.setStyle( "paddingLeft", padding );
-					
+
 					padding = getStyle( "paddingTop" );
-					
+
 					if( labelDisplay.getStyle( "paddingTop" ) != padding )
 						labelDisplay.setStyle( "paddingTop", padding );
-					
+
 					padding = getStyle( "paddingRight" );
-					
+
 					if( labelDisplay.getStyle( "paddingRight" ) != padding )
 						labelDisplay.setStyle( "paddingRight", padding );
-					
+
 					padding = getStyle( "paddingBottom" );
-					
+
 					if( labelDisplay.getStyle( "paddingBottom" ) != padding )
 						labelDisplay.setStyle( "paddingBottom", padding );
 					paddingChanged = false;
 				}
-				
+
 				if( cornerRadiusChanged )
 				{
 					cornerRadiusChanged = false;
-					
+
 					/* var cr:Number = getStyle("cornerRadius");
-					
+
 					if (openButton)
 					openButton.setStyle("cornerRadius", cr);
 					if (labelDisplay)
 					labelDisplay.setStyle("cornerRadius", cr); */
 				}
 			}
-			
+
 			/**
 			 *  @private
 			 */
 			override public function styleChanged( styleProp:String ):void
 			{
 				var allStyles:Boolean = !styleProp || styleProp == "styleName";
-				
+
 				super.styleChanged( styleProp );
-				
+
 				if( allStyles || styleProp.indexOf( "padding" ) == 0 )
 				{
 					paddingChanged = true;
 					invalidateProperties();
 				}
-				
+
 				if( allStyles || styleProp == "cornerRadius" )
 				{
 					cornerRadiusChanged = true;
 					invalidateProperties();
 				}
 			}
-			
+
 			override protected function updateDisplayList( unscaledWidth:Number, unscaledHeight:Number ):void
 			{
 				if( getStyle( "borderVisible" ) == false )
@@ -173,12 +173,8 @@
 		<p>In a custom skin class that uses transitions, set the
 		<code>itemDestructionPolicy</code> property to <code>never</code>.</p>
 	-->
-	<s:PopUpAnchor id="popUp" displayPopUp.normal="false"
-				   displayPopUp.open="true" includeIn="open"
-				   left="0" right="0"
-				   top="0" bottom="0"
-				   itemDestructionPolicy="auto" popUpPosition="below"
-				   popUpWidthMatchesAnchorWidth="true">
+	<s:PopUpAnchor id="popUp" displayPopUp.normal="false" displayPopUp.open="true" includeIn="open" left="0" right="0" top="0" bottom="0"
+				   itemDestructionPolicy="auto" popUpPosition="below" popUpWidthMatchesAnchorWidth="true">
 
 		<!---
 			  This includes borders, background colors, scrollers, and filters.
@@ -207,10 +203,7 @@
 			</s:Rect>
 
 			<!--- @private -->
-			<s:Scroller id="scroller" left="0"
-						top="0" right="0"
-						bottom="0" hasFocusableChildren="false"
-						minViewportInset="1">
+			<s:Scroller id="scroller" left="0" top="0" right="0" bottom="0" hasFocusableChildren="false" minViewportInset="1">
 				<!--- @copy spark.components.SkinnableDataContainer#dataGroup-->
 				<s:DataGroup id="dataGroup" itemRenderer="starskin.itemRenderers.IR_Default">
 					<s:layout>
@@ -224,16 +217,10 @@
 	<!---  The default skin is DropDownListButtonSkin.
 			@copy spark.components.supportClasses.DropDownListBase#openButton
 			@see spark.skins.spark.DropDownListButtonSkin -->
-	<s:Button id="openButton" left="0"
-			  right="0" top="0"
-			  bottom="0" focusEnabled="false"
-			  tabEnabled="false" skinClass="starskin.skins.DropDownListButtonSkin" />
+	<s:Button id="openButton" left="0" right="0" top="0" bottom="0" focusEnabled="false" tabEnabled="false"
+			  skinClass="starskin.skins.DropDownListButtonSkin" />
 
 	<!--- @copy spark.components.DropDownList#labelDisplay -->
-	<s:Label id="labelDisplay" verticalAlign="middle"
-			 maxDisplayedLines="1" mouseEnabled="false"
-			 mouseChildren="false" left="0"
-			 right="30" top="2"
-			 bottom="2" width="75" />
+	<s:Label id="labelDisplay" verticalAlign="middle" maxDisplayedLines="1" left="0" right="25" verticalCenter="1" />
 
 </s:SparkSkin>
