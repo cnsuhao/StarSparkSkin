@@ -8,8 +8,8 @@ StarSparkSkin v1.5
   * 3、DateField 和 DatePicker 都支持皮肤主题，可以自定义外观
 
 ##相关配图：
-  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/_assets/date1.png?dir=0&filepath=_assets%2Fdate1.png&oid=eabc5837ea6c9b1789a373b9efb558870afe74b3&sha=916b2cfb5151c8e906bf14c81bab193f1c493187)
-  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/_assets/date2.png?dir=0&filepath=_assets%2Fdate2.png&oid=a7815699eccc3956910b86edb36cb514d1be927c&sha=916b2cfb5151c8e906bf14c81bab193f1c493187)
+  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/_assets/date1.png?dir=0&filepath=_assets%2Fdate1.png&oid=eabc5837ea6c9b1789a373b9efb558870afe74b3&sha=78379048a6b4f36d71957651a2af70d3212c4725)
+  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/_assets/date2.png?dir=0&filepath=_assets%2Fdate2.png&oid=a7815699eccc3956910b86edb36cb514d1be927c&sha=78379048a6b4f36d71957651a2af70d3212c4725)
 
 
 StarSparkSkin v1.4
@@ -33,7 +33,7 @@ StarSparkSkin v1.3
   * 这势必有些麻烦，而 FormValidator 可以方便的对多个验证器进行统一管理，只要所有验证器结果都通过了，则会统一派发一个 VALID 事件，来提醒进行下一步的逻辑处理。
   
 ##相关配图：
-  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/form.png?dir=0&filepath=form.png&oid=6b879dd3f3c4e5b2805234a7057902223f889e69&sha=060f09fd180dc4d24e0149cad0516f019ddb0a87)
+  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/_assets/form.png?dir=0&filepath=_assets%2Fform.png&oid=6b879dd3f3c4e5b2805234a7057902223f889e69&sha=78379048a6b4f36d71957651a2af70d3212c4725)
 
 
 
@@ -47,7 +47,7 @@ StarSparkSkin v1.2
   * 3、重新设计 ToolTipBorder，支持4个方向的指示符号，优化大量绘制细节，美化外观
   
 ##相关配图：
-  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/tip.png?dir=0&filepath=tip.png&oid=4b17f1af7ca465561cd9e8ec5c49836a9db998e8&sha=cd1e36f1ab57a5db51374be7db956d6fa91acfe5)
+  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/_assets/tip.png?dir=0&filepath=_assets%2Ftip.png&oid=4b17f1af7ca465561cd9e8ec5c49836a9db998e8&sha=78379048a6b4f36d71957651a2af70d3212c4725)
 
 
 StarSparkSkin v1.1
@@ -75,8 +75,8 @@ StarSparkSkin v1.0
   * 6、覆盖常用的大部分组件皮肤
 
 ##相关配图：
-  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/0.png?dir=0&filepath=0.png&oid=208ed44decdf142ebb8d07aa03e86e1b69071e7c&sha=a44469869c546da2fb53d25e13de3cb822848559)
+  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/_assets/0.png?dir=0&filepath=_assets%2F0.png&oid=208ed44decdf142ebb8d07aa03e86e1b69071e7c&sha=78379048a6b4f36d71957651a2af70d3212c4725)
 
-  * ![image](http://git.oschina.net/starfire/StarSparkSkin/raw/master/1.jpg?dir=0&filepath=1.jpg&oid=c7e5599a69b5edcd2740208e2569837daedfee6f&sha=781ca9976008433a0c3cef6b4ed08ed8ccf5062c)
+  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/_assets/1.jpg?dir=0&filepath=_assets%2F1.jpg&oid=c7e5599a69b5edcd2740208e2569837daedfee6f&sha=78379048a6b4f36d71957651a2af70d3212c4725)
   
-  * ![image](http://git.oschina.net/starfire/StarSparkSkin/raw/master/2.jpg?dir=0&filepath=2.jpg&oid=2287838d626ae9884da38cb11764dc213c08266b&sha=781ca9976008433a0c3cef6b4ed08ed8ccf5062c)
+  * ![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/_assets/2.jpg?dir=0&filepath=_assets%2F2.jpg&oid=2287838d626ae9884da38cb11764dc213c08266b&sha=78379048a6b4f36d71957651a2af70d3212c4725)
