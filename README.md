@@ -1,4 +1,4 @@
-##喵大斯微信订阅号，已经开通：请在微信>通讯录>公众号>搜索“喵大斯AS3教程”以获取最及时的AS3经验知识。![image]()
+` 喵大斯微信订阅号已开通：请在微信>通讯录>公众号>搜索“喵大斯AS3教程”以获取最及时的AS3经验知识。![image](https://git.oschina.net/starfire/StarSparkSkin/raw/master/_assets/wx-100x100.jpg?dir=0&filepath=_assets%2Fwx-100x100.jpg&oid=54df34f62326259a98df71256f83949d961d4a56&sha=1652abcf24111cbd8bfe9fd8b28c9c65f0f215a2)
 
 StarSparkSkin v1.5
 =====
